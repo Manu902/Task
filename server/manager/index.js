@@ -18,7 +18,7 @@ const login = (req, res) => {
         }
     }catch(error){
         console.log(error);
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const saveCategory = async(req, res) => {
@@ -28,7 +28,7 @@ const saveCategory = async(req, res) => {
         res.status(200).json({message: 'Successfully save category data'})
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const getCategories = async(req, res) => {
@@ -37,7 +37,7 @@ const getCategories = async(req, res) => {
         res.status(200).json({list: categoryList});
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const updateCategory = async(req, res) => {
@@ -48,7 +48,7 @@ const updateCategory = async(req, res) => {
         res.status(200).json({message: 'Successfully update category'})
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const deleteCateory = async(req, res) => {
@@ -57,7 +57,7 @@ const deleteCateory = async(req, res) => {
         res.status(200).json({message: 'Successfully delete category'})
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const saveService = async(req, res) => {
@@ -67,7 +67,7 @@ const saveService = async(req, res) => {
         res.status(200).josn({message: 'Successfully service data save'})
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const getSirvices = async(req, res) => {
@@ -76,7 +76,7 @@ const getSirvices = async(req, res) => {
         res.status(200).jons({list: serviceList});
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const deleteService = async(req, res) => {
@@ -87,7 +87,7 @@ const deleteService = async(req, res) => {
         res.status(200).json({message: 'Successfully delete service'})
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 const updateService = async(req, res) => {
@@ -95,7 +95,7 @@ const updateService = async(req, res) => {
         await Service.update(req.body, {where: {categoryId: req.params.categoryId, serviceId: req.params.serviceId}});
     }catch(error){
         console.log(error)
-        res.statu(500).json({message: 'Internal server error'})
+        res.status(500).json({message: 'Internal server error'})
     }
 }
 
